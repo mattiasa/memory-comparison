@@ -1,0 +1,7 @@
+# Build outputs
+/rust/target/
+/go/tcp-exporter
+
+# Python bytecode
+__pycache__/
+*.pyc

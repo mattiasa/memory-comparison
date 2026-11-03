@@ -1,0 +1,15 @@
+[package]
+name = "tcp-exporter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Small, synchronous HTTP server: no async runtime, no thread pool.
+tiny_http = { version = "0.12", default-features = false }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
